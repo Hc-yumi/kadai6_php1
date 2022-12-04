@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- css当ててる -->
-  <style>
-        .menu {
-            background-color: #2FA6E9;
-        }
-    </style>
+  <title>アンケート課題</title>
 
-  <title>アンケート</title>
+  <!--resetとcssの順番は重要 -->
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 
