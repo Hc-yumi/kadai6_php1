@@ -1,3 +1,5 @@
+      <p>お名前｜メールアドレス｜出身地｜感想①｜感想②</p>
+      
       <?php
           // ファイルを開く
           $openFile = fopen('./data/data.txt', 'r');
@@ -20,27 +22,18 @@
           {
             $zeile = fgets($openFile);
             // ,を｜に変える
-            // $str= str_replace(' , ' , ' | ' ,$zeile);
-            // echo nl2br($str);
+
+            $str= str_replace(' , ' , ' | ' ,$zeile);
             echo "<tr><td>$counter</td>";
-            echo "<td>$zeile</td>";
+            // echo "<td>$zeile</td>";
+            echo "<td>$str</td>";
             $counter++;
 
-            var_dump($zeile);
+            // var_dump($zeile);
           }
+
             echo "</table>";
   
-
-           // $file = fopen("info.txt", "r") or die("Unable to open file!");
-          // while (!feof($openFile)){   
-          // $data = fgets($openFile); 
-
-          // echo "<tr><td>" . str_replace('|','</td><td>',$data) . '</td></tr>';
-      //     $str = str_replace(" ", " | ", $openFile); 
-      //           echo nl2br($str);
-      // }
-
-
       // echo '</table>';
 
       // ファイルを閉じる

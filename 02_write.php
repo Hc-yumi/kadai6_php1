@@ -35,7 +35,7 @@ $file = fopen('data/data.txt', 'a');
 // fwrite($file, $name." " .$mail." " .$birthPlace. " ".$cs." " .$q." " .$time. "\n")
 // $file_w = array($name,$mail,$birthPlace,$cs,$q);
 // fwrite($file, $file_w);
-fwrite($file, $name.' , ' .$mail.' , ' .$birthPlace. ' , '.$cs.' , ' .$q."\n");
+fwrite($file, $name.' , ' .$mail.' , ' .$birthPlace. ' , '.$cs.' , '.$q . "\n");
 // fwrite($file, $name. $mail. $birthPlace. $cs. $q."\n");
 // ③閉じる
 fclose($file);
