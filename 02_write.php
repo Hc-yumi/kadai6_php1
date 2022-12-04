@@ -2,46 +2,104 @@
 
 $name = $_POST['name'];
 $mail = $_POST['mail'];
-$birthPlace = $_POST['birthPlace'];
-$cs = $_POST['cs'];
-$q = $_POST['q'];
+$live = $_POST['live'];
+$format = $_POST['format'];
+$place = $_POST['place'];
+$gest = $_POST['gest'];
+$price = $_POST['price'];
+$question = $_POST['question'];
 
 // $time = date('Y-m-d H:i:s');
 
 
+
+// ラジオボタンのfor文 ====>チャレンジしたい！
+// $let array = ['format', 'place','gest', 'price', 'question'];
+// for($let =0; i < array.length; i++);{
+
+//   if(isset($_POST[i])){
+//     $array[i] =$_POST[i];
+//     echo '形式:' . array[i] .'<br>';
+//   } else {
+//     $array = '未回答';
+//     echo '選択されていません。<br>';
+//   }
+
+// }
+
+
+
 // ラジオボタンの確認
-if(isset($_POST['cs'])){
-  $cs =$_POST['cs'];
-  echo '満足度:' . $cs .'<br>';
+// 質問①
+if(isset($_POST['format'])){
+  $format =$_POST['format'];
+  echo '形式:' . $format .'<br>';
 } else {
-  echo '満足度が選択されていません。<br>';
+  $format = '未回答';
+  echo '選択されていません。<br>';
+}
+
+// 質問②
+if(isset($_POST['place'])){
+  $place =$_POST['place'];
+  echo '場所:' . $place .'<br>';
+} else {
+  $place = '未回答';
+  echo '選択されていません。<br>';
+}
+
+// 質問③
+if(isset($_POST['gest'])){
+  $gest =$_POST['gest'];
+  echo 'ゲスト:' . $gest .'<br>';
+} else {
+  $gest = '未回答';
+  echo '選択されていません。<br>';
+}
+
+// 質問④
+if(isset($_POST['price'])){
+  $price =$_POST['price'];
+  echo '予算:' . $price .'<br>';
+} else {
+  $price = '未回答';
+  echo '選択されていません。<br>';
+}
+
+// 質問⑤
+if(isset($_POST['question'])){
+  $question =$_POST['question'];
+  echo '情報:' . $question .'<br>';
+} else {
+  $question = '未回答';
+  echo '選択されていません。<br>';
 }
 
 
 // チェックボックスの確認
-if (isset($_POST['q'])) {
-  $q = implode(", ", $_POST["q"]);
-  echo '利用の目的：' . $q . '<br>';
-} else {
-  echo 'チェックされていません。<br>';
-}
+// if (isset($_POST['q'])) {
+//   $q = implode(", ", $_POST["q"]);
+//   echo '利用の目的：' . $q . '<br>';
+// } else {
+//   echo 'チェックされていません。<br>';
+// }
 
 
 
 // ファイルに書き込み
 // ①開く
 $file = fopen('data/data.txt', 'a');
+
 // ②書く
-// fwrite($file, $name." " .$mail." " .$birthPlace. " ".$cs." " .$q." " .$time. "\n")
-// $file_w = array($name,$mail,$birthPlace,$cs,$q);
-// fwrite($file, $file_w);
-fwrite($file, $name.' , ' .$mail.' , ' .$birthPlace. ' , '.$cs.' , '.$q . "\n");
+fwrite($file, $name.' , '. $mail.' , '. $live. ' , '.$format.' , '. $place . ' , '. $gest .' , '.$price .' , '.$question . "\n");
 // fwrite($file, $name. $mail. $birthPlace. $cs. $q."\n");
+
 // ③閉じる
 fclose($file);
-//文字作成
-
 ?>
+
+
+<!-- 文字作成 -->
 
 
 <html>
