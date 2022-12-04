@@ -9,3 +9,22 @@ while ($str = fgets($openFile)) {
 
 // ファイルを閉じる
 fclose($openFile);
+
+?>
+
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>readFileの確認</title>
+</head>
+
+<body>
+
+  <p><a href="01_post.php">アンケートに戻る</a></p>
+
+</body>
+
+</html>

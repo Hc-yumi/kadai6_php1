@@ -10,7 +10,7 @@ $time = date('Y-m-d H:i:s');
 // ①開く
 $file = fopen('data/data.txt', 'a');
 // ②書く
-fwrite($file, $time. $name. $mail. $birthPlace. "\n");
+fwrite($file, $name. $mail. $birthPlace. $time."\n");
 // ③閉じる
 fclose($file);
 //文字作成
@@ -26,14 +26,14 @@ fclose($file);
 </head>
 
 <body>
-
+<!-- 
     <h1>書き込みしました。</h1>
-    <h2>./data/data.txt を確認しましょう！</h2>
+    <h2>./data/data.txt を確認しましょう！</h2> -->
+    <p>アンケートありがとうございました。</p>
 
-    <ul>
-        <li><a href="03_read.php">確認する</a></li>
-        <li><a href="01_post.php">戻る</a></li>
-    </ul>
+    <p><a href="03_read.php"> 集計結果はこちら</p>
+    <p><a href="01_post.php">アンケートに戻る</p>
+
 </body>
 
 </html>
