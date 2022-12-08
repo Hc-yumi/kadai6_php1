@@ -1,11 +1,16 @@
 body{
-  /* background-color: #68C39F; */
-  background-color: red;
+  background-color: #68C39F;
+  /* background-color: red; */
   min-height: 100vh;
 }
 
+.input_area{
+  margin: auto;
+  font-size: 1.5rem;
+}
+
 .input_name{
-  padding: 2rem;
+  /* padding: 2rem; */
   font-family:"Nico Moji" ;
 }
 
@@ -14,3 +19,16 @@ body{
   font-family:"Nico Moji" ;
   font-weight: bold;
 }
+
+.sum_text{
+  padding: 1rem;
+  font-family:"Nico Moji" ;
+  font-weight: bold;
+}
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+

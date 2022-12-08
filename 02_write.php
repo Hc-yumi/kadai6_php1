@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File書き込み</title>
+
+  <!--resetとcssの順番は重要 -->
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
 <?php
 
 $name = $_POST['name'];
@@ -102,25 +116,18 @@ fwrite($file, $name.' , '. $mail.' , '. $live. ' , '.$format.' , '. $place . ' ,
 fclose($file);
 ?>
 
-<!-- 文字作成 -->
-
-
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>File書き込み</title>
-</head>
-
 <body>
 <!-- 
     <h1>書き込みしました。</h1>
     <h2>./data/data.txt を確認しましょう！</h2> -->
-    <p>アンケートありがとうございました。</p>
 
-    <p><a href="03_read.php"> 集計結果はこちら</p>
-    <p><a href="01_post.php">アンケートに戻る</p>
+    <p>こちらの回答で合っていますか。</p>
+      <div class="hantei">
+        <p><a href="03_read.php"> YES</p>
+        <p><a href="01_post.php">NO</p>
+      </div>
 
 </body>
 
 </html>
+

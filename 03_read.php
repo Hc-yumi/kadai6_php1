@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fileの確認</title>
+
+  <!--resetとcssの順番は重要 -->
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+      
+<body>      
+      
+      
+      
       <table>
         <?php
         // ファイルを開く
@@ -21,7 +37,8 @@
 
           ?>
 
-<p>お名前｜メールアドレス｜居住地｜形式｜場所｜ゲスト｜予算｜情報</p>
+<!-- <p>お名前｜メールアドレス｜居住地｜形式｜場所｜ゲスト｜予算｜情報</p> -->
+<p>お名前｜メールアドレス｜居住地</p>
 
 
 <!-- <?php            
@@ -52,13 +69,13 @@
 <?php
 echo "<table border = 4>";
     $input_array = array();
-    $counter = 1;
+    $counter = 0;
     while($input_line = fgets($openFile)){
       array_push($input_array, $input_line);
 
       $str_r = str_replace(' , ' , ' | ' ,$input_line);
       echo "<tr><td>$counter</td>";
-      echo "<td>$input_line</td>";
+      // echo "<td>$input_line</td>";
       echo "<td>$str_r</td>";
       $counter++;
     }
@@ -148,7 +165,7 @@ echo "<table border = 4>";
 ?>
 
   <div>
-      <p>形式の集計</p>
+      <p class=sum_text>形式の集計</p>
       <table border="1">
         <tr>
           <th>教会式</th>
@@ -168,7 +185,7 @@ echo "<table border = 4>";
   </div>
 
 
-  <p>場所の集計</p>
+  <p class=sum_text>場所の集計</p>
       <table border="1">
         <tr>
           <th>地元</th>
@@ -187,7 +204,7 @@ echo "<table border = 4>";
         </table>
   </div>
 
-  <p>ゲストの集計</p>
+  <p class=sum_text>ゲストの集計</p>
       <table border="1">
         <tr>
           <th>ふたり</th>
@@ -206,7 +223,7 @@ echo "<table border = 4>";
         </table>
   </div>
 
-  <p>予算の集計</p>
+  <p class=sum_text>予算の集計</p>
       <table border="1">
         <tr>
           <th>0～30万円</th>
@@ -225,7 +242,7 @@ echo "<table border = 4>";
         </table>
   </div>
 
-  <p>情報の集計</p>
+  <p class=sum_text>情報の集計</p>
       <table border="1">
         <tr>
           <th>口コミ</th>
@@ -284,17 +301,8 @@ echo "<table border = 4>";
 
 
 // ここまで 
+?>
 
-      ?>
-
-  <html>
-
-  <head>
-      <meta charset="utf-8">
-      <title>readFileの確認</title>
-  </head>
-
-  <body>
 
     <p><a href="01_post.php">アンケートに戻る</a></p>
 
