@@ -10,23 +10,13 @@ $price = $_POST['price'];
 $question = $_POST['question'];
 
 // $time = date('Y-m-d H:i:s');
-
+echo '名前:' . $name . '<br>';
+echo 'mail:' . $mail . '<br>';
 
 
 // ラジオボタンのfor文 ====>チャレンジしたい！
 // $let array = ['format', 'place','gest', 'price', 'question'];
 // for($let =0; i < array.length; i++);{
-
-//   if(isset($_POST[i])){
-//     $array[i] =$_POST[i];
-//     echo '形式:' . array[i] .'<br>';
-//   } else {
-//     $array = '未回答';
-//     echo '選択されていません。<br>';
-//   }
-
-// }
-
 
 
 // ラジオボタンの確認
@@ -76,23 +66,43 @@ if(isset($_POST['question'])){
 }
 
 
-// チェックボックスの確認
-// if (isset($_POST['q'])) {
-//   $q = implode(", ", $_POST["q"]);
-//   echo '利用の目的：' . $q . '<br>';
-// } else {
-//   echo 'チェックされていません。<br>';
-// }
+//連想配列  変数を用意
+// $ary = array(
+//   'name' => $name,
+//   'mail' => $mail,
+//   'live' => $live,
+//   'format' => $format,
+//   'place' => $place,
+//   'gest' => $gest,
+//   'price' => $price,
+//   'question' => $question
+// );
 
+// $ary = array(
+//   $name,
+//   $mail,
+//   $live,
+//   $format,
+//   $place,
+//   $gest,
+//   $price,
+//   $question
+// );
+
+// var_dump($ary);
 
 
 // ファイルに書き込み
 // ①開く
 $file = fopen('data/data.txt', 'a');
+// $b = array ($name, $mail, $live, $format, $place, $gest, $price, $question);
 
 // ②書く
+// fwrite($file, print_r($ary, true));
+// fwrite($file, $ary);
 fwrite($file, $name.' , '. $mail.' , '. $live. ' , '.$format.' , '. $place . ' , '. $gest .' , '.$price .' , '.$question . "\n");
 // fwrite($file, $name. $mail. $birthPlace. $cs. $q."\n");
+// fwrite($file, $b);
 
 // ③閉じる
 fclose($file);
