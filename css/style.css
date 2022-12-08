@@ -1,4 +1,16 @@
 body{
-  background-color: #68C39F;
+  /* background-color: #68C39F; */
+  background-color: red;
   min-height: 100vh;
+}
+
+.input_name{
+  padding: 2rem;
+  font-family:"Nico Moji" ;
+}
+
+.main_text{
+  padding: 1rem;
+  font-family:"Nico Moji" ;
+  font-weight: bold;
 }

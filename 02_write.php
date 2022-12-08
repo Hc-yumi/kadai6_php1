@@ -14,12 +14,7 @@ echo '名前:' . $name . '<br>';
 echo 'mail:' . $mail . '<br>';
 
 
-// ラジオボタンのfor文 ====>チャレンジしたい！
-// $let array = ['format', 'place','gest', 'price', 'question'];
-// for($let =0; i < array.length; i++);{
-
-
-// ラジオボタンの確認
+// ラジオボタンの確認 //未回答をデフォルトにしたため以下不要
 // 質問①
 if(isset($_POST['format'])){
   $format =$_POST['format'];
@@ -66,7 +61,7 @@ if(isset($_POST['question'])){
 }
 
 
-//連想配列  変数を用意
+// 連想配列  変数を用意
 // $ary = array(
 //   'name' => $name,
 //   'mail' => $mail,
@@ -101,13 +96,11 @@ $file = fopen('data/data.txt', 'a');
 // fwrite($file, print_r($ary, true));
 // fwrite($file, $ary);
 fwrite($file, $name.' , '. $mail.' , '. $live. ' , '.$format.' , '. $place . ' , '. $gest .' , '.$price .' , '.$question . "\n");
-// fwrite($file, $name. $mail. $birthPlace. $cs. $q."\n");
-// fwrite($file, $b);
+
 
 // ③閉じる
 fclose($file);
 ?>
-
 
 <!-- 文字作成 -->
 
