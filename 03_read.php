@@ -149,7 +149,7 @@ echo "<table border = 4>";
 
 
   // $tekito = 'こだわらない';
-  for ($i=0; $i < count($input_array); $i++){
+  for ($i=0; $i <= count($input_array); $i++){
     // print_r($input_array[i]);
     $value = explode(" , ", $input_array[$i]);
     // echo $value[3]; 
